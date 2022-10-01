@@ -11,7 +11,7 @@
 
             void OptionsDisplay()
             {
-                Console.WriteLine("\nSelect option :\n1.Get Payroll Table Details\n2.Add data to tables\n6.Exit\nProvide option number : --> ");
+                Console.WriteLine("\nSelect option :\n1.Get Payroll Table Details\n2.Add data to tables\n3.Update Pay details\n6.Exit\nProvide option number : --> ");
                 int option = int.Parse(Console.ReadLine());
                 Console.WriteLine();
                 switch (option)
@@ -24,6 +24,10 @@
                         emp.AddEmpDetails();
                         OptionsDisplay();
                         break;
+                    case 3:
+                        emp.UpdateBasicPay();
+                        OptionsDisplay();
+                        break ;
                     default:
                         Console.WriteLine("Enter correct option");
                         break;
